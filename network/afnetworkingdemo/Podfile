@@ -7,5 +7,6 @@ target 'afnetworkingdemo' do
 
   # Pods for afnetworkingdemo
     pod 'AFNetworking', '~> 4.0'
+    pod 'MJExtension'
 
 end

@@ -9,11 +9,11 @@
 
 @implementation GRUserInfo
 
-+(instancetype)userInfoWithDict:(NSDictionary*)dic{
-    GRUserInfo *userinfo=[[GRUserInfo alloc]init];
-    [userinfo setValuesForKeysWithDictionary:dic];
-    return userinfo;
-    
-}
--(void)setValue:(id)value forUndefinedKey:(NSString *)key{}
+//+(instancetype)userInfoWithDict:(NSDictionary*)dic{
+//    GRUserInfo *userinfo=[[GRUserInfo alloc]init];
+//    [userinfo setValuesForKeysWithDictionary:dic];
+//    return userinfo;
+//
+//}
+//-(void)setValue:(id)value forUndefinedKey:(NSString *)key{}
 @end

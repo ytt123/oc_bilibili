@@ -13,12 +13,12 @@ NS_ASSUME_NONNULL_BEGIN
 
 @interface GRUser : NSObject
 
-@property (nonatomic,strong) GRUserInfo *info;
+@property (nonatomic,strong) GRUserInfo *user;
 
-@property (nonatomic,strong) GRUseToken *token;
+@property (nonatomic,strong) GRUseToken *token_info;
 
 
-+(instancetype)userWithDict:(NSDictionary*)dic;
+//+(instancetype)userWithDict:(NSDictionary*)dic;
 +(void)userWithSuccess:(void (^)(GRUser*user))success fail:(void(^)(NSError*err))fail;
 
 

@@ -96,6 +96,7 @@
 		C44CF0B22660977D00373829 /* afnetworkingdemo */ = {
 			isa = PBXGroup;
 			children = (
+				C493CD6D2660F2B300724AC6 /* BaseView */,
 				C44CF0B32660977D00373829 /* AppDelegate.h */,
 				C44CF0B42660977D00373829 /* AppDelegate.m */,
 				C44CF0B62660977D00373829 /* SceneDelegate.h */,
@@ -129,6 +130,13 @@
 				C493CD642660DE7100724AC6 /* GRUseToken.m */,
 			);
 			path = Models;
+			sourceTree = "<group>";
+		};
+		C493CD6D2660F2B300724AC6 /* BaseView */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = BaseView;
 			sourceTree = "<group>";
 		};
 		E3EDDDA34155CF722A5F0AEC /* Frameworks */ = {

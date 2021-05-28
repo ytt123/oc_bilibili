@@ -9,6 +9,7 @@
 #import "GRNetUtil.h"
 #import "GRNews.h"
 #import "GRUser.h"
+#import <MJExtension/MJExtension.h>
 @import AFNetworking;
 @interface ViewController ()
 
@@ -34,21 +35,45 @@
 
 
 -(void)login{
-    GRUser*user=[GRUser userWithDict:@{
-        @"user": @{
-          
-                @"mobile": @"18238770746",
-                @"name": @"",
-                @"nick_name": @"18238770746",
-           
-        },
-        @"token_info": @{
-                @"token": @"eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJzb3VyY2UiOiJ1c2VyIiwiY2xpZW50X3R5cGUiOiJhcHAiLCJ1c2VyX3R5cGUiOiJVU0VSIiwiYWNjb3VudF91dWlkIjoiMmFhM2NkOTktOWEyYS0zOTMwLTY0OGUtNzIwZDllOTM1NDE1IiwidXNlcl91dWlkIjoiNzJmY2RlNTMtYzQxNS0yNmUwLTdmNGItYzA2MmU1NmUxNmRhIiwidXNlcl9tb2JpbGUiOiIxODIzODc3MDc0NiIsInVzZXJfcm9sZV91dWlkIjoiIiwiY3JlYXRlX2F0IjoxNjIyMTk1Mjg4LCJ1cGRhdGVfYXQiOjE2MjIxOTUyODgsImV4cCI6MTYyMjkxNTI4OH0.pm8l00sAzbFXYPNSX-jLqiNeW6ZOqfQORpKG_fEoCz4",
-                @"refresh_token": @"88b24aa2c6e1019b513b60123d526c05",
-                @"token_id": @"190b161d752c9b12f8e7fa8099411e1b"
-        }
+//    GRUser*user=[GRUser userWithDict:@{
+//        @"user": @{
+//
+//                @"mobile": @"18238770746",
+//                @"name": @"",
+//                @"nick_name": @"18238770746",
+//
+//        },
+//        @"token_info": @{
+//                @"token": @"eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJzb3VyY2UiOiJ1c2VyIiwiY2xpZW50X3R5cGUiOiJhcHAiLCJ1c2VyX3R5cGUiOiJVU0VSIiwiYWNjb3VudF91dWlkIjoiMmFhM2NkOTktOWEyYS0zOTMwLTY0OGUtNzIwZDllOTM1NDE1IiwidXNlcl91dWlkIjoiNzJmY2RlNTMtYzQxNS0yNmUwLTdmNGItYzA2MmU1NmUxNmRhIiwidXNlcl9tb2JpbGUiOiIxODIzODc3MDc0NiIsInVzZXJfcm9sZV91dWlkIjoiIiwiY3JlYXRlX2F0IjoxNjIyMTk1Mjg4LCJ1cGRhdGVfYXQiOjE2MjIxOTUyODgsImV4cCI6MTYyMjkxNTI4OH0.pm8l00sAzbFXYPNSX-jLqiNeW6ZOqfQORpKG_fEoCz4",
+//                @"refresh_token": @"88b24aa2c6e1019b513b60123d526c05",
+//                @"token_id": @"190b161d752c9b12f8e7fa8099411e1b"
+//        }
+//    }];
+//    NSLog(@"user%@",user);
+    
+    
+//    GRUser*user=[GRUser mj_objectWithKeyValues:@{
+//                @"user": @{
+//
+//                        @"mobile": @"18238770746",
+//                        @"name": @"",
+//                        @"nick_name": @"18238770746",
+//
+//                },
+//                @"token_info": @{
+//                        @"token": @"eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJzb3VyY2UiOiJ1c2VyIiwiY2xpZW50X3R5cGUiOiJhcHAiLCJ1c2VyX3R5cGUiOiJVU0VSIiwiYWNjb3VudF91dWlkIjoiMmFhM2NkOTktOWEyYS0zOTMwLTY0OGUtNzIwZDllOTM1NDE1IiwidXNlcl91dWlkIjoiNzJmY2RlNTMtYzQxNS0yNmUwLTdmNGItYzA2MmU1NmUxNmRhIiwidXNlcl9tb2JpbGUiOiIxODIzODc3MDc0NiIsInVzZXJfcm9sZV91dWlkIjoiIiwiY3JlYXRlX2F0IjoxNjIyMTk1Mjg4LCJ1cGRhdGVfYXQiOjE2MjIxOTUyODgsImV4cCI6MTYyMjkxNTI4OH0.pm8l00sAzbFXYPNSX-jLqiNeW6ZOqfQORpKG_fEoCz4",
+//                        @"refresh_token": @"88b24aa2c6e1019b513b60123d526c05",
+//                        @"token_id": @"190b161d752c9b12f8e7fa8099411e1b"
+//                }
+//            } ];
+//        NSLog(@"user%@",user);
+    
+    [GRUser userWithSuccess:^(GRUser * _Nonnull user) {
+        NSLog(@"user=%@",user);
+    } fail:^(NSError * _Nonnull err) {
+        NSLog(@"err=%@",err);
     }];
-    NSLog(@"user%@",user);
+    
     
 }
 -(void)postWebWithUpload{

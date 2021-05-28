@@ -13,7 +13,7 @@ NS_ASSUME_NONNULL_BEGIN
 @property (nonatomic,assign) int id;
 @property (nonatomic,strong) NSString* uuid;
 
-+(instancetype)userInfoWithDict:(NSDictionary*)dic;
+//+(instancetype)userInfoWithDict:(NSDictionary*)dic;
 @end
 
 NS_ASSUME_NONNULL_END

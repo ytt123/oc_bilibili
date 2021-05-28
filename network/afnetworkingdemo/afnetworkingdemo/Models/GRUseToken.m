@@ -8,11 +8,11 @@
 #import "GRUseToken.h"
 
 @implementation GRUseToken
-+(instancetype)userTokenWithDict:(NSDictionary*)dic{
-    GRUseToken *useToken=[[GRUseToken alloc]init];
-    [useToken setValuesForKeysWithDictionary:dic];
-    return useToken;
-    
-}
--(void)setValue:(id)value forUndefinedKey:(NSString *)key{}
+//+(instancetype)userTokenWithDict:(NSDictionary*)dic{
+//    GRUseToken *useToken=[[GRUseToken alloc]init];
+//    [useToken setValuesForKeysWithDictionary:dic];
+//    return useToken;
+//
+//}
+//-(void)setValue:(id)value forUndefinedKey:(NSString *)key{}
 @end
