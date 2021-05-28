@@ -12,6 +12,8 @@
 #import <MJExtension/MJExtension.h>
 @import AFNetworking;
 @interface ViewController ()
+@property (nonatomic,assign) Boolean isOpen;
+@property (nonatomic,strong) NSTimer* timer;
 
 @end
 
@@ -20,7 +22,24 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
 
-
+    self.isOpen=true;
+    UIButton*throttleBtn=[UIButton buttonWithType:UIButtonTypeCustom];
+    [throttleBtn setFrame:CGRectMake(100, 100, 100, 100)];
+    throttleBtn.backgroundColor=[UIColor redColor];
+    [throttleBtn setTitle:@"123" forState:UIControlStateNormal];
+    [throttleBtn addTarget:self action:@selector(throttleClick:) forControlEvents:UIControlEventTouchUpInside];
+    [self.view addSubview:throttleBtn];
+    
+    
+    UIButton*debounceBtn=[UIButton buttonWithType:UIButtonTypeCustom];
+    [debounceBtn setFrame:CGRectMake(100, 200, 100, 100)];
+    debounceBtn.backgroundColor=[UIColor redColor];
+    [debounceBtn setTitle:@"123" forState:UIControlStateNormal];
+    [debounceBtn addTarget:self action:@selector(debounceClick:) forControlEvents:UIControlEventTouchUpInside];
+    [self.view addSubview:debounceBtn];
+    
+    
+    
 }
 -(void)touchesBegan:(NSSet<UITouch *> *)touches withEvent:(UIEvent *)event{
 //    [self getWebSpecial];
@@ -30,7 +49,35 @@
 //            NSLog(@"错了");
 //        }];
 //
-    [self login];
+//    [self login];
+}
+
+-(void)debounceClick:(UIButton*)btn{
+
+    [self.timer invalidate];
+    self.timer= [NSTimer scheduledTimerWithTimeInterval:3.0f target:self selector:@selector(delayMethod:) userInfo:nil repeats:NO];
+    
+    
+}
+-(void)delayMethod:(NSTimer*)timer{
+
+    NSLog(@"123");
+  
+    
+}
+-(void)throttleClick:(UIButton*)btn{
+//     __block Boolean isOpen=true;
+    if(self.isOpen){
+        NSLog(@"123");
+        self.isOpen=false;
+        dispatch_after(dispatch_time(DISPATCH_TIME_NOW, (int64_t)(3 * NSEC_PER_SEC)), dispatch_get_main_queue(), ^{
+            self.isOpen=true;
+         });
+
+    }
+
+ 
+    
 }
 
 

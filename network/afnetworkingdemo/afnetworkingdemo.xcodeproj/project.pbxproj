@@ -20,6 +20,8 @@
 		C493CD582660DCBB00724AC6 /* GRUser.m in Sources */ = {isa = PBXBuildFile; fileRef = C493CD572660DCBB00724AC6 /* GRUser.m */; };
 		C493CD612660DE6000724AC6 /* GRUserInfo.m in Sources */ = {isa = PBXBuildFile; fileRef = C493CD602660DE6000724AC6 /* GRUserInfo.m */; };
 		C493CD652660DE7100724AC6 /* GRUseToken.m in Sources */ = {isa = PBXBuildFile; fileRef = C493CD642660DE7100724AC6 /* GRUseToken.m */; };
+		C493CD702660F39A00724AC6 /* GRThrottleBtn.m in Sources */ = {isa = PBXBuildFile; fileRef = C493CD6F2660F39A00724AC6 /* GRThrottleBtn.m */; };
+		C493CD792660F40200724AC6 /* GRDebounceBtn.m in Sources */ = {isa = PBXBuildFile; fileRef = C493CD782660F40200724AC6 /* GRDebounceBtn.m */; };
 		C4F60D732660B96A000F2F10 /* icon2.png in Resources */ = {isa = PBXBuildFile; fileRef = C4F60D712660B96A000F2F10 /* icon2.png */; };
 		C4F60D742660B96A000F2F10 /* icon1.png in Resources */ = {isa = PBXBuildFile; fileRef = C4F60D722660B96A000F2F10 /* icon1.png */; };
 /* End PBXBuildFile section */
@@ -50,6 +52,10 @@
 		C493CD602660DE6000724AC6 /* GRUserInfo.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = GRUserInfo.m; sourceTree = "<group>"; };
 		C493CD632660DE7100724AC6 /* GRUseToken.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = GRUseToken.h; sourceTree = "<group>"; };
 		C493CD642660DE7100724AC6 /* GRUseToken.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = GRUseToken.m; sourceTree = "<group>"; };
+		C493CD6E2660F39A00724AC6 /* GRThrottleBtn.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = GRThrottleBtn.h; sourceTree = "<group>"; };
+		C493CD6F2660F39A00724AC6 /* GRThrottleBtn.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = GRThrottleBtn.m; sourceTree = "<group>"; };
+		C493CD772660F40200724AC6 /* GRDebounceBtn.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = GRDebounceBtn.h; sourceTree = "<group>"; };
+		C493CD782660F40200724AC6 /* GRDebounceBtn.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = GRDebounceBtn.m; sourceTree = "<group>"; };
 		C4F60D712660B96A000F2F10 /* icon2.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = icon2.png; sourceTree = "<group>"; };
 		C4F60D722660B96A000F2F10 /* icon1.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = icon1.png; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -135,6 +141,10 @@
 		C493CD6D2660F2B300724AC6 /* BaseView */ = {
 			isa = PBXGroup;
 			children = (
+				C493CD6E2660F39A00724AC6 /* GRThrottleBtn.h */,
+				C493CD6F2660F39A00724AC6 /* GRThrottleBtn.m */,
+				C493CD772660F40200724AC6 /* GRDebounceBtn.h */,
+				C493CD782660F40200724AC6 /* GRDebounceBtn.m */,
 			);
 			path = BaseView;
 			sourceTree = "<group>";
@@ -265,6 +275,8 @@
 				C44CF0BB2660977D00373829 /* ViewController.m in Sources */,
 				C44CF0B52660977D00373829 /* AppDelegate.m in Sources */,
 				C44CF0C62660977F00373829 /* main.m in Sources */,
+				C493CD702660F39A00724AC6 /* GRThrottleBtn.m in Sources */,
+				C493CD792660F40200724AC6 /* GRDebounceBtn.m in Sources */,
 				C493CD612660DE6000724AC6 /* GRUserInfo.m in Sources */,
 				C493CD652660DE7100724AC6 /* GRUseToken.m in Sources */,
 				C493CD532660D03300724AC6 /* GRNews.m in Sources */,
